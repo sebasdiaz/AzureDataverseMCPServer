@@ -10,8 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- MCP over HTTP/SSE for ASP.NET Core -->
-    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.6.0" />
+    <!-- MCP over Streamable HTTP for ASP.NET Core (latest stable: 1.1.0, released 2026-03-06) -->
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="1.1.0" />
+    <!--
+      Explicitly pin ModelContextProtocol to 1.1.0 so NuGet resolves this version
+      instead of the older 0.4.0-preview.1 pulled in by the project reference.
+      [McpServerTool], [McpServerToolType] and WithToolsFromAssembly() are all
+      backward-compatible in 1.1.0 — no changes to the existing tool classes required.
+    -->
+    <PackageReference Include="ModelContextProtocol" Version="1.1.0" />
     <!-- Dataverse client (also pulled transitively from the project reference, explicit for clarity) -->
     <PackageReference Include="Microsoft.PowerPlatform.Dataverse.Client" Version="1.2.10" />
   </ItemGroup>

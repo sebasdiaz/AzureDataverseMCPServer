@@ -69,7 +69,12 @@ var app = builder.Build();
 // ---------------------------------------------------------------
 app.UseMiddleware<ApiKeyMiddleware>();
 
+// Health-check endpoint — no auth required, useful for Azure probe and quick validation.
+app.MapGet("/", () => Results.Ok(new { status = "ok", server = "Dataverse MCP Server" }))
+   .AllowAnonymous();
+
 // Exposes the MCP Streamable HTTP endpoint at /mcp
-app.MapMcp();
+// (Copilot Studio uses POST /mcp for all MCP JSON-RPC requests)
+app.MapMcp("/mcp");
 
 await app.RunAsync();

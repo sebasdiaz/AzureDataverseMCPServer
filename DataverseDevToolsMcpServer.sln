@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataverseDevToolsMcpServer", "DataverseDevToolsMcpServer\DataverseDevToolsMcpServer.csproj", "{F9650BB7-AAD2-43E4-8CEF-F5C6730D8168}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataverseDevToolsMcpServer.Azure", "DataverseDevToolsMcpServer.Azure\DataverseDevToolsMcpServer.Azure.csproj", "{2D4A6B8C-1E3F-5071-9A2B-C4D6E8F01234}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F9650BB7-AAD2-43E4-8CEF-F5C6730D8168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9650BB7-AAD2-43E4-8CEF-F5C6730D8168}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9650BB7-AAD2-43E4-8CEF-F5C6730D8168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4A6B8C-1E3F-5071-9A2B-C4D6E8F01234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4A6B8C-1E3F-5071-9A2B-C4D6E8F01234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4A6B8C-1E3F-5071-9A2B-C4D6E8F01234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4A6B8C-1E3F-5071-9A2B-C4D6E8F01234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

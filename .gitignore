@@ -58,6 +58,9 @@ ScaffoldingReadMe.txt
 # Entity Framework
 Migrations/
 
+# Claude Code local settings
+.claude/
+
 # Others
 *.vspscc
 *.vssscc

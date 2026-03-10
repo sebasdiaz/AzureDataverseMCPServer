@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>DataverseDevToolsMcpServer.Azure</RootNamespace>
+    <AssemblyName>DataverseDevToolsMcpServer.Azure</AssemblyName>
+    <Description>Azure-hosted ASP.NET Core MCP Server for Dataverse Dev Tools — consumable from Copilot Studio via HTTP.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MCP over HTTP/SSE for ASP.NET Core -->
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.6.0" />
+    <!-- Dataverse client (also pulled transitively from the project reference, explicit for clarity) -->
+    <PackageReference Include="Microsoft.PowerPlatform.Dataverse.Client" Version="1.2.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reference the existing project to reuse all Tools, Models and Helpers without code duplication -->
+    <ProjectReference Include="..\DataverseDevToolsMcpServer\DataverseDevToolsMcpServer.csproj" />
+  </ItemGroup>
+
+</Project>
